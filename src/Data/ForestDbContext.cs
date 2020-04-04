@@ -14,5 +14,10 @@ namespace Data
         public DbSet<ForestType> ForestTypes { get; set; }
 
         public DbSet<TreeType> TreeTypes { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ForestType>().HasData(new ForestType { Id = 1, Name = "Oak"});
+        }
     }
 }

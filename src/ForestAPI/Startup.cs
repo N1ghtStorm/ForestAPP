@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Data.Extensions;
+using Domain.Extensions;
+using Service.Extensions;
 
 namespace ForestAPI
 {
@@ -28,6 +30,9 @@ namespace ForestAPI
         {
             services.AddControllers();
             services.AddForestDbContextMSSQL(Configuration["mssqlConnectionString"]);
+            services.AddDomainServices();
+            services.AddDataAccessLayer();
+            services.AddBusinessLogicLayer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

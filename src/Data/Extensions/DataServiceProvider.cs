@@ -11,7 +11,7 @@ namespace Data.Extensions
             services.AddDbContext<ForestDbContext>(opt => opt.UseSqlServer(connectionString), ServiceLifetime.Transient);
         }
 
-        public static void AddRepositories(this IServiceCollection services)
+        public static void AddDataAccessLayer(this IServiceCollection services)
         {
             services.AddScoped<IForestRepository, ForestRepository>();
         }
