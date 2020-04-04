@@ -14,6 +14,7 @@ namespace Data.Extensions
         public static void AddDataAccessLayer(this IServiceCollection services)
         {
             services.AddScoped<IForestRepository, ForestRepository>();
+            services.AddScoped<ITreeRepository, TreeRepository>();
         }
     }
 }
