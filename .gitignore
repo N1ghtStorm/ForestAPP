@@ -34,4 +34,6 @@ msbuild.err
 msbuild.wrn
 
 # Visual Studio 2015
-.vs/
+./src/.vs/**
+src/ForestAPI/bin/**
+src/ForestAPI/obj/**
