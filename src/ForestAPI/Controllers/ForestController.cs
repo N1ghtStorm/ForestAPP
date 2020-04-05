@@ -7,11 +7,11 @@ namespace ForestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ForestController : ExtendedApiController<IForestService>
+    public class ForestController : ExtendedApiController
     {
         private readonly IForestService _forestService;
 
-        public ForestController(IForestService forestService) : base(forestService)
+        public ForestController(IForestService forestService)
         {
             _forestService = forestService;
         }

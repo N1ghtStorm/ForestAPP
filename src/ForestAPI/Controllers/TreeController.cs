@@ -9,7 +9,7 @@ namespace ForestAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TreeController : ControllerBase
+    public class TreeController : ExtendedApiController
     {
     }
 }

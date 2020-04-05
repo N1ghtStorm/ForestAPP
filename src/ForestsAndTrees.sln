@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestAPI", "ForestAPI\ForestAPI.csproj", "{840FB75A-735A-4BC1-8D12-236729847434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForestAPI", "ForestAPI\ForestAPI.csproj", "{840FB75A-735A-4BC1-8D12-236729847434}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{509F949A-3D71-45FF-A895-44F3DF2F108B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{509F949A-3D71-45FF-A895-44F3DF2F108B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{CE636329-EBEC-4C65-A706-7F881ADE4562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{CE636329-EBEC-4C65-A706-7F881ADE4562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{B1E23929-DA2B-440B-A485-BC21628E58B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{B1E23929-DA2B-440B-A485-BC21628E58B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{51975A46-11B0-4A91-B27E-8F8865FE1FC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTests", "DataTests\DataTests.csproj", "{107B1960-DFCE-4ACA-B1B7-FFD308EFA644}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{B1E23929-DA2B-440B-A485-BC21628E58B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1E23929-DA2B-440B-A485-BC21628E58B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1E23929-DA2B-440B-A485-BC21628E58B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{107B1960-DFCE-4ACA-B1B7-FFD308EFA644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{107B1960-DFCE-4ACA-B1B7-FFD308EFA644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{107B1960-DFCE-4ACA-B1B7-FFD308EFA644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{107B1960-DFCE-4ACA-B1B7-FFD308EFA644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{107B1960-DFCE-4ACA-B1B7-FFD308EFA644} = {51975A46-11B0-4A91-B27E-8F8865FE1FC9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0ABF15A2-B4CB-4124-973D-910071AEBE6F}

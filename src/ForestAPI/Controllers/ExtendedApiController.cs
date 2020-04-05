@@ -1,22 +1,12 @@
 ﻿using ForestAPI.Errors;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ForestAPI.Controllers
 {
-    public abstract class ExtendedApiController<T> : ControllerBase where T : class
+    public abstract class ExtendedApiController : ControllerBase
     {
-        // Service Object
-        public T Service { get; }
-
-        protected ExtendedApiController(T service)
-        {
-            Service = service;
-        }
-
         // TODO: Return Custom IActionResult Error
         protected IActionResult Error(Error error)
         {
@@ -35,6 +25,7 @@ namespace ForestAPI.Controllers
             }
             catch (Exception e)
             {
+                // TODO: Error handling
                 return Error(new Error(500, e.Message));
             }
         }
