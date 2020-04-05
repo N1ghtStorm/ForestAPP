@@ -13,6 +13,9 @@ namespace Domain.Mappings
         {
             CreateMap<Forest, ForestDTO>();
             CreateMap<ForestDTO, Forest>();
+
+            CreateMap<Tree, TreeDTO>();
+            CreateMap<TreeDTO, Tree>();
         }
     }
 }
