@@ -1,11 +1,19 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Data.Repositories
 {
-    public abstract class RepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IDisposable, IAsyncDisposable where T : class
     {
+        private readonly DbContext _dbContext;
+
+        public RepositoryBase(DbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         protected async Task InvokeQueryAsync(Func<Task> func)
         {
             try
@@ -43,6 +51,16 @@ namespace Data.Repositories
                 //TODO: Implement
                 throw new NotImplementedException(e.Message);
             }
+        }
+
+        public void Dispose()
+        {
+            _dbContext.Dispose();
+        }
+
+        public async ValueTask DisposeAsync()
+        {
+            await _dbContext.DisposeAsync();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Data.Repositories
     {
         private readonly ForestDbContext _dbContext;
 
-        public ForestRepository(ForestDbContext dbContext)
+        public ForestRepository(ForestDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }
