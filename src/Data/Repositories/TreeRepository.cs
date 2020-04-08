@@ -8,6 +8,10 @@ namespace Data.Repositories
 {
     public class TreeRepository : RepositoryBase<Tree>, ITreeRepository
     {
+        public TreeRepository(ForestDbContext dbContext): base(dbContext)
+        {
+
+        }
         public Task<Tree> CreateTreeAsync(Tree tree)
         {
             throw new NotImplementedException();
